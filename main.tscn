@@ -1,0 +1,175 @@
+[gd_scene load_steps=7 format=1]
+
+[ext_resource path="res://room.gd" type="Script" id=1]
+[ext_resource path="res://boxes.png" type="Texture" id=2]
+[ext_resource path="res://costumeA.png" type="Texture" id=3]
+[ext_resource path="res://actor.gd" type="Script" id=4]
+[ext_resource path="res://addons/box_plugin/box.gd" type="Script" id=5]
+[ext_resource path="res://addons/box_plugin/icon.png" type="Texture" id=6]
+
+[node name="Room" type="Node2D"]
+
+script/script = ExtResource( 1 )
+
+[node name="bg" type="Sprite" parent="."]
+
+texture = ExtResource( 2 )
+offset = Vector2( 160, 120 )
+
+[node name="Actor" type="Sprite" parent="."]
+
+texture = ExtResource( 3 )
+offset = Vector2( 0, -35 )
+script/script = ExtResource( 4 )
+
+[node name="boxes" type="Node" parent="."]
+
+[node name="Box1" type="Node2D" parent="boxes"]
+
+script/script = ExtResource( 5 )
+__meta__ = { "_editor_icon":ExtResource( 6 ) }
+ID = 1
+BoxFlags = 0
+mask = null
+scale = null
+UL = Vector2( 60, 154 )
+LL = Vector2( 45, 174 )
+LR = Vector2( 89, 174 )
+UR = Vector2( 89, 154 )
+
+[node name="Box2" type="Node2D" parent="boxes"]
+
+script/script = ExtResource( 5 )
+__meta__ = { "_editor_icon":ExtResource( 6 ) }
+ID = 2
+BoxFlags = 0
+mask = null
+scale = null
+UL = Vector2( 45, 174 )
+LL = Vector2( 13, 202 )
+LR = Vector2( 89, 202 )
+UR = Vector2( 89, 174 )
+
+[node name="Box3" type="Node2D" parent="boxes"]
+
+script/script = ExtResource( 5 )
+__meta__ = { "_editor_icon":ExtResource( 6 ) }
+ID = 3
+BoxFlags = 0
+mask = null
+scale = null
+UL = Vector2( 89, 192 )
+LL = Vector2( 89, 202 )
+LR = Vector2( 181, 202 )
+UR = Vector2( 181, 192 )
+
+[node name="Box4" type="Node2D" parent="boxes"]
+
+script/script = ExtResource( 5 )
+__meta__ = { "_editor_icon":ExtResource( 6 ) }
+ID = 4
+BoxFlags = 0
+mask = null
+scale = null
+UL = Vector2( 153, 128 )
+LL = Vector2( 153, 128 )
+LR = Vector2( 181, 156 )
+UR = Vector2( 181, 156 )
+
+[node name="Box5" type="Node2D" parent="boxes"]
+
+script/script = ExtResource( 5 )
+__meta__ = { "_editor_icon":ExtResource( 6 ) }
+ID = 5
+BoxFlags = 0
+mask = null
+scale = null
+UL = Vector2( 181, 156 )
+LL = Vector2( 181, 202 )
+LR = Vector2( 231, 202 )
+UR = Vector2( 231, 156 )
+
+[node name="Box6" type="Node2D" parent="boxes"]
+
+script/script = ExtResource( 5 )
+__meta__ = { "_editor_icon":ExtResource( 6 ) }
+ID = 6
+BoxFlags = 0
+mask = null
+scale = null
+UL = Vector2( 231, 122 )
+LL = Vector2( 231, 167 )
+LR = Vector2( 277, 167 )
+UR = Vector2( 277, 122 )
+
+[node name="Box7" type="Node2D" parent="boxes"]
+
+script/script = ExtResource( 5 )
+__meta__ = { "_editor_icon":ExtResource( 6 ) }
+ID = 7
+BoxFlags = 0
+mask = null
+scale = null
+UL = Vector2( 99, 128 )
+LL = Vector2( 99, 128 )
+LR = Vector2( 153, 128 )
+UR = Vector2( 153, 128 )
+
+[node name="Box8" type="Node2D" parent="boxes"]
+
+script/script = ExtResource( 5 )
+__meta__ = { "_editor_icon":ExtResource( 6 ) }
+ID = 8
+BoxFlags = 0
+mask = null
+scale = null
+UL = Vector2( 231, 167 )
+LL = Vector2( 231, 202 )
+LR = Vector2( 301, 202 )
+UR = Vector2( 277, 167 )
+
+[node name="unused_boxes" type="Node2D" parent="."]
+
+editor/display_folded = true
+visibility/visible = false
+
+[node name="Box6" type="Node2D" parent="unused_boxes"]
+
+script/script = ExtResource( 5 )
+__meta__ = { "_editor_icon":ExtResource( 6 ) }
+ID = 10
+BoxFlags = 0
+mask = null
+scale = null
+UL = Vector2( 135, 145 )
+LL = Vector2( 135, 145 )
+LR = Vector2( 185, 95 )
+UR = Vector2( 185, 95 )
+
+[node name="Box5" type="Node2D" parent="unused_boxes"]
+
+script/script = ExtResource( 5 )
+__meta__ = { "_editor_icon":ExtResource( 6 ) }
+ID = 11
+BoxFlags = 0
+mask = null
+scale = null
+UL = Vector2( 160, 95 )
+LL = Vector2( 160, 145 )
+LR = Vector2( 160, 145 )
+UR = Vector2( 160, 95 )
+
+[node name="Box4" type="Node2D" parent="unused_boxes"]
+
+script/script = ExtResource( 5 )
+__meta__ = { "_editor_icon":ExtResource( 6 ) }
+ID = 12
+BoxFlags = 0
+mask = null
+scale = null
+UL = Vector2( 135, 120 )
+LL = Vector2( 135, 120 )
+LR = Vector2( 185, 120 )
+UR = Vector2( 185, 120 )
+
+
