@@ -24,6 +24,8 @@ script/script = ExtResource( 4 )
 
 [node name="boxes" type="Node" parent="."]
 
+editor/display_folded = true
+
 [node name="Box1" type="Node2D" parent="boxes"]
 
 script/script = ExtResource( 5 )
@@ -127,49 +129,5 @@ UL = Vector2( 231, 167 )
 LL = Vector2( 231, 202 )
 LR = Vector2( 301, 202 )
 UR = Vector2( 277, 167 )
-
-[node name="unused_boxes" type="Node2D" parent="."]
-
-editor/display_folded = true
-visibility/visible = false
-
-[node name="Box6" type="Node2D" parent="unused_boxes"]
-
-script/script = ExtResource( 5 )
-__meta__ = { "_editor_icon":ExtResource( 6 ) }
-ID = 10
-BoxFlags = 0
-mask = null
-scale = null
-UL = Vector2( 135, 145 )
-LL = Vector2( 135, 145 )
-LR = Vector2( 185, 95 )
-UR = Vector2( 185, 95 )
-
-[node name="Box5" type="Node2D" parent="unused_boxes"]
-
-script/script = ExtResource( 5 )
-__meta__ = { "_editor_icon":ExtResource( 6 ) }
-ID = 11
-BoxFlags = 0
-mask = null
-scale = null
-UL = Vector2( 160, 95 )
-LL = Vector2( 160, 145 )
-LR = Vector2( 160, 145 )
-UR = Vector2( 160, 95 )
-
-[node name="Box4" type="Node2D" parent="unused_boxes"]
-
-script/script = ExtResource( 5 )
-__meta__ = { "_editor_icon":ExtResource( 6 ) }
-ID = 12
-BoxFlags = 0
-mask = null
-scale = null
-UL = Vector2( 135, 120 )
-LL = Vector2( 135, 120 )
-LR = Vector2( 185, 120 )
-UR = Vector2( 185, 120 )
 
 
