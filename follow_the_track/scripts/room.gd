@@ -4,6 +4,7 @@ onready var nav2d = get_node("walk_area")
 onready var player = get_node("walk_area/Ego")
 
 var scale_factor = 2
+var font = preload("res://resources/fonts/font1.tres")
 
 
 
