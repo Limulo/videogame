@@ -5,11 +5,17 @@ onready var player = get_node("walk_area/Ego")
 
 var scale_factor = 2
 var font = preload("res://resources/fonts/font1.tres")
+var base_window_size= Vector2()
 
-
+var objects=[]
 
 func _ready():
-	OS.set_window_size(OS.get_window_size()*scale_factor)
-	set_process_unhandled_input(true)
+	base_window_size = OS.get_window_size()
+	OS.set_window_size(base_window_size*scale_factor)
+	for o in get_node("objects").get_children():
+		objects.append(o)
 
-
+func clearObjectsName():
+	for o in objects:
+		o.showObjectName=false
+		o.update()

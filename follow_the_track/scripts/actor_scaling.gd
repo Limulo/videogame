@@ -9,7 +9,7 @@ var m = (y1-y2)/(scale1-scale2)
 var q = y2 - (scale2*m)
 
 # movement
-var vel = 50
+var vel = 75
 var moving=false
 
 func _ready():

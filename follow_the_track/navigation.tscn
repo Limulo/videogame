@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=1]
+[gd_scene load_steps=10 format=1]
 
 [ext_resource path="res://scripts/room.gd" type="Script" id=1]
 [ext_resource path="res://images/bg.png" type="Texture" id=2]
@@ -6,10 +6,8 @@
 [ext_resource path="res://scripts/walkarea_input.gd" type="Script" id=4]
 [ext_resource path="res://images/char.png" type="Texture" id=5]
 [ext_resource path="res://scripts/actor_scaling.gd" type="Script" id=6]
-[ext_resource path="res://scripts/table_input.gd" type="Script" id=7]
-[ext_resource path="res://scripts/bookshelf_input.gd" type="Script" id=8]
-[ext_resource path="res://scripts/window_input.gd" type="Script" id=9]
-[ext_resource path="res://scripts/door_input.gd" type="Script" id=10]
+[ext_resource path="res://scripts/object_code.gd" type="Script" id=7]
+[ext_resource path="res://scripts/object_name.gd" type="Script" id=8]
 
 [sub_resource type="NavigationPolygon" id=1]
 
@@ -52,7 +50,9 @@ centered = false
 offset = Vector2( -32, -75 )
 script/script = ExtResource( 6 )
 
-[node name="table" type="Polygon2D" parent="."]
+[node name="objects" type="Node2D" parent="."]
+
+[node name="table" type="Polygon2D" parent="objects"]
 
 editor/display_folded = true
 polygon = Vector2Array( 141, 132, 142, 168, 144, 171, 235, 170, 239, 161, 239, 131, 226, 121, 148, 121 )
@@ -69,11 +69,11 @@ invert/border = 100.0
 script/script = ExtResource( 7 )
 name = "the table"
 
-[node name="interact_point" type="Position2D" parent="table"]
+[node name="interact_point" type="Position2D" parent="objects/table"]
 
 transform/pos = Vector2( 194, 173 )
 
-[node name="bookshelf" type="Polygon2D" parent="."]
+[node name="bookshelf" type="Polygon2D" parent="objects"]
 
 editor/display_folded = true
 polygon = Vector2Array( 69, 41, 137, 41, 137, 159, 70, 159 )
@@ -87,14 +87,14 @@ texture/scale = Vector2( 1, 1 )
 texture/rotation = 0.0
 invert/enable = false
 invert/border = 100.0
-script/script = ExtResource( 8 )
+script/script = ExtResource( 7 )
 name = "the bookshelf"
 
-[node name="interact_point" type="Position2D" parent="bookshelf"]
+[node name="interact_point" type="Position2D" parent="objects/bookshelf"]
 
 transform/pos = Vector2( 103, 163 )
 
-[node name="window" type="Polygon2D" parent="."]
+[node name="window" type="Polygon2D" parent="objects"]
 
 editor/display_folded = true
 polygon = Vector2Array( 10, 28, 49, 38, 50, 107, 10, 146 )
@@ -108,14 +108,14 @@ texture/scale = Vector2( 1, 1 )
 texture/rotation = 0.0
 invert/enable = false
 invert/border = 100.0
-script/script = ExtResource( 9 )
+script/script = ExtResource( 7 )
 name = "the window"
 
-[node name="interact_point" type="Position2D" parent="window"]
+[node name="interact_point" type="Position2D" parent="objects/window"]
 
 transform/pos = Vector2( 55, 180 )
 
-[node name="door" type="Polygon2D" parent="."]
+[node name="door" type="Polygon2D" parent="objects"]
 
 editor/display_folded = true
 polygon = Vector2Array( 265, 71, 305, 70, 306, 202, 266, 169 )
@@ -129,10 +129,146 @@ texture/scale = Vector2( 1, 1 )
 texture/rotation = 0.0
 invert/enable = false
 invert/border = 100.0
-script/script = ExtResource( 10 )
+script/script = ExtResource( 7 )
+name = "the door"
 
-[node name="interact_point" type="Position2D" parent="door"]
+[node name="interact_point" type="Position2D" parent="objects/door"]
 
 transform/pos = Vector2( 317, 180 )
+
+[node name="book_1" type="Polygon2D" parent="objects"]
+
+editor/display_folded = true
+polygon = Vector2Array( 72.1797, 45.339, 79.7714, 45.339, 79.4794, 63.7344, 71.5957, 63.7344 )
+uv = Vector2Array(  )
+color = Color( 0.992188, 0.674377, 0, 1 )
+vertex_colors = ColorArray(  )
+offset = Vector2( 0, 0 )
+texture/texture = null
+texture/offset = Vector2( 0, 0 )
+texture/scale = Vector2( 1, 1 )
+texture/rotation = 0.0
+invert/enable = false
+invert/border = 100.0
+script/script = ExtResource( 7 )
+name = "the old and the sea"
+
+[node name="interact_point" type="Position2D" parent="objects/book_1"]
+
+transform/pos = Vector2( 72.7168, 162.344 )
+
+[node name="book_2" type="Polygon2D" parent="objects"]
+
+editor/display_folded = true
+transform/pos = Vector2( 32.5694, 43.5725 )
+polygon = Vector2Array( 82.1145, 70.8829, 90.456, 71.2801, 90.0588, 87.1687, 81.7173, 87.1687 )
+uv = Vector2Array(  )
+color = Color( 0, 1, 0.367188, 1 )
+vertex_colors = ColorArray(  )
+offset = Vector2( 0, 0 )
+texture/texture = null
+texture/offset = Vector2( 0, 0 )
+texture/scale = Vector2( 1, 1 )
+texture/rotation = 0.0
+invert/enable = false
+invert/border = 100.0
+script/script = ExtResource( 7 )
+name = "hamlet"
+
+[node name="interact_point" type="Position2D" parent="objects/book_2"]
+
+transform/pos = Vector2( 89.2673, 117.557 )
+
+[node name="book_3" type="Polygon2D" parent="objects"]
+
+editor/display_folded = true
+transform/pos = Vector2( 2.09809, 70.459 )
+polygon = Vector2Array( 82.1145, 70.8829, 90.456, 71.2801, 90.0588, 87.1687, 81.7173, 87.1687 )
+uv = Vector2Array(  )
+color = Color( 1, 0.164062, 0, 1 )
+vertex_colors = ColorArray(  )
+offset = Vector2( 0, 0 )
+texture/texture = null
+texture/offset = Vector2( 0, 0 )
+texture/scale = Vector2( 1, 1 )
+texture/rotation = 0.0
+invert/enable = false
+invert/border = 100.0
+script/script = ExtResource( 7 )
+name = "war and peace"
+
+[node name="interact_point" type="Position2D" parent="objects/book_3"]
+
+transform/pos = Vector2( 86.041, 97.1232 )
+
+[node name="book_4" type="Polygon2D" parent="objects"]
+
+editor/display_folded = true
+transform/pos = Vector2( 118.22, 51.1278 )
+polygon = Vector2Array( 81.6296, 70.7919, 89.7259, 71.1775, 95.1234, 78.2456, 85.742, 78.5026 )
+uv = Vector2Array(  )
+color = Color( 1, 0.960938, 0, 1 )
+vertex_colors = ColorArray(  )
+offset = Vector2( 0, 0 )
+texture/texture = null
+texture/offset = Vector2( 0, 0 )
+texture/scale = Vector2( 1, 1 )
+texture/rotation = 0.0
+invert/enable = false
+invert/border = 100.0
+script/script = ExtResource( 7 )
+name = "the lord of the rings"
+
+[node name="interact_point" type="Position2D" parent="objects/book_4"]
+
+transform/pos = Vector2( 94.2167, 121.358 )
+
+[node name="lamp" type="Polygon2D" parent="objects"]
+
+editor/display_folded = true
+transform/pos = Vector2( 76.6085, 51.8686 )
+polygon = Vector2Array( 81.6296, 70.7919, 84.0276, 70.9061, 84.148, 62.5941, 75.4091, 62.2085, 81.9633, 51.285, 89.5455, 51.285, 95.2, 62.8511, 86.24, 62.9762, 86.9753, 70.8189, 89.7259, 71.1775, 92.1157, 74.6742, 79.0075, 74.2887 )
+uv = Vector2Array(  )
+color = Color( 1, 0.890625, 0, 1 )
+vertex_colors = ColorArray(  )
+offset = Vector2( 0, 0 )
+texture/texture = null
+texture/offset = Vector2( 0, 0 )
+texture/scale = Vector2( 1, 1 )
+texture/rotation = 0.0
+invert/enable = false
+invert/border = 100.0
+script/script = ExtResource( 7 )
+name = "the lamp"
+
+[node name="interact_point" type="Position2D" parent="objects/lamp"]
+
+transform/pos = Vector2( 89.8368, 121.358 )
+
+[node name="air_vent" type="Polygon2D" parent="objects"]
+
+transform/pos = Vector2( 155.391, -24.7136 )
+polygon = Vector2Array( 99.3594, 47.6644, 148.414, 25.4732, 164.473, 24.5973, 164.473, 70.7316, 99.0674, 74.5275 )
+uv = Vector2Array(  )
+color = Color( 1, 0.890625, 0, 1 )
+vertex_colors = ColorArray(  )
+offset = Vector2( 0, 0 )
+texture/texture = null
+texture/offset = Vector2( 0, 0 )
+texture/scale = Vector2( 1, 1 )
+texture/rotation = 0.0
+invert/enable = false
+invert/border = 100.0
+script/script = ExtResource( 7 )
+name = "this is a air vent that rumbles"
+
+[node name="interact_point" type="Position2D" parent="objects/air_vent"]
+
+transform/pos = Vector2( 104.467, 210.603 )
+
+[node name="object_name" type="Node2D" parent="."]
+
+z/z = 5
+script/script = ExtResource( 8 )
 
 
