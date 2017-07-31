@@ -52,6 +52,8 @@ script/script = ExtResource( 6 )
 
 [node name="objects" type="Node2D" parent="."]
 
+editor/display_folded = true
+
 [node name="table" type="Polygon2D" parent="objects"]
 
 editor/display_folded = true
@@ -247,6 +249,7 @@ transform/pos = Vector2( 89.8368, 121.358 )
 
 [node name="air_vent" type="Polygon2D" parent="objects"]
 
+editor/display_folded = true
 transform/pos = Vector2( 155.391, -24.7136 )
 polygon = Vector2Array( 99.3594, 47.6644, 148.414, 25.4732, 164.473, 24.5973, 164.473, 70.7316, 99.0674, 74.5275 )
 uv = Vector2Array(  )

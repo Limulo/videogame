@@ -28,7 +28,7 @@ func calculate_position(p):
 		position.y = size.y
 	else:
 		position.y=p.y
-	print(size, " ", position, " ", window_size)
+	#print(size, " ", position, " ", window_size)
 	set_pos(position)
 
 func _draw():
